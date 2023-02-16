@@ -1,0 +1,316 @@
+.enjoy {
+  // .enjoy__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  // .enjoy__body
+
+  &__body {
+    flex: 1 1 50%;
+    max-width: 486px;
+    margin-right: 12.6%;
+  }
+
+  // .enjoy__title
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 6.07rem;
+    line-height: 105px;
+  }
+
+  // .enjoy__descr
+
+  &__descr {
+    margin-bottom: 45px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+
+    /* or 156% */
+
+    color: #81878e;
+  }
+
+  // .enjoy__button
+
+  &__button {
+    margin-right: 24px;
+  }
+
+  // .enjoy__image
+
+  &__image {
+    position: relative;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__label {
+    &--1 {
+      position: absolute;
+      top: -43px;
+      left: -61px;
+    }
+    &--2 {
+      position: absolute;
+      bottom: -43px;
+      left: -61px;
+    }
+    &--3 {
+      position: absolute;
+      top: 67px;
+      right: -162px;
+      p {
+        transform: translateX(11px);
+      }
+    }
+  }
+
+  //circle
+
+  &__circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: all 0.2s ease;
+
+    &.active {
+      transform: scale(1);
+      transition: all 0.2s ease;
+    }
+
+    &--1 {
+      top: -188px;
+      left: -8px;
+      width: 53px;
+      height: 53px;
+      background: #f2bd42;
+      border: 1px solid #f2bd42;
+    }
+    &--2 {
+      top: 30px;
+      left: -26px;
+      width: 82px;
+      height: 82px;
+
+      background: #3674e0;
+      border: 1px solid #3674e0;
+    }
+    &--3 {
+      bottom: -62px;
+      left: 127px;
+      width: 121px;
+      height: 121px;
+
+      background: #57a25b;
+      border: 1px solid #57a25b;
+    }
+    &--4 {
+      top: -33px;
+      right: -33px;
+      width: 121px;
+      height: 121px;
+
+      border: 2px solid #fb4438;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  input {
+    width: 100%;
+    height: 100%;
+    padding-left: 6%;
+    max-width: 301px;
+    max-height: 51px;
+    font-size: 1.1rem;
+    border: 1px solid $blue;
+    border-radius: 25.5px;
+  }
+
+  &__label {
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 3.1;
+    color: $blue;
+
+    // &::before {
+    //   content: "";
+    //   padding-left: 1.1rem;
+    //   display: inline;
+    //   background: url("../../images/form-img.png") 0 0 no-repeat;
+    //   border: 1px solid red;
+    // }
+
+    @include breakpoint($breakpoint-2) {
+      padding-left: 10px;
+    }
+    @include breakpoint($breakpoint-5) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__group {
+    flex: 1 1 auto;
+    position: relative;
+  }
+
+  input:focus ~ &__label {
+    display: none;
+  }
+}
+
+@include breakpoint(1439.98px) {
+  .enjoy {
+    &__body {
+    }
+
+    &__label {
+      &--1 {
+        position: absolute;
+        top: -23px;
+        left: -31px;
+      }
+      &--2 {
+        position: absolute;
+        bottom: -23px;
+        left: -30px;
+      }
+      &--3 {
+        position: absolute;
+        top: 33px;
+        right: -86px;
+        p {
+          transform: translateX(11px);
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(1356px) {
+  .enjoy {
+    &__body {
+    }
+  }
+}
+
+@include breakpoint($breakpoint-1) {
+  .enjoy {
+    &__title {
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-size: 5.07rem;
+      line-height: 90px;
+    }
+
+    // .enjoy__descr
+
+    &__descr {
+      margin-bottom: 35px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+
+      /* or 156% */
+
+      color: #81878e;
+    }
+
+    &__body {
+      flex: 1 1 50%;
+      max-width: 486px;
+      margin-right: 9.6%;
+    }
+
+    &__image {
+      img {
+        max-width: 400px;
+      }
+    }
+
+    &__label {
+      &--3 {
+        right: -22px;
+      }
+    }
+
+    &__circle {
+      &--1 {
+        top: -100px;
+      }
+    }
+  }
+}
+
+@include breakpoint($breakpoint-2) {
+  .enjoy {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      margin-bottom: 80px;
+    }
+    &__title {
+      text-align: center;
+    }
+
+    &__descr {
+      text-align: center;
+    }
+
+    &__image {
+    }
+  }
+}
+
+@include breakpoint($breakpoint-5) {
+  .enjoy {
+    &__title {
+      font-size: 2.07rem;
+      line-height: 30px;
+    }
+
+    &__image {
+      img {
+        max-width: 260px;
+      }
+    }
+
+    &__label {
+      &--3 {
+        top: 67px;
+        right: -42px;
+
+        p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 80px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.posibilities {
+  padding: 124px 0 116px 0;
+  // .posibilities__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 234px;
+
+    @include breakpoint($breakpoint-1) {
+      gap: 100px;
+    }
+  }
+
+  // .posibilities__title
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  // .posibilities__descr
+
+  &__descr {
+    margin-bottom: 23px;
+    font-family: "Rubik";
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* or 162% */
+
+    color: #81878e;
+  }
+
+  // .posibilities__image
+
+  &__image {
+    position: relative;
+
+    @include breakpoint($breakpoint-1) {
+      img {
+        max-width: 400px;
+      }
+    }
+  }
+
+  // .posibilities__label
+
+  &__label {
+    position: absolute;
+  }
+
+  // .posibilities__label--1
+
+  &__label--1 {
+    top: -37px;
+    left: -47px;
+    @include breakpoint(1439.98px) {
+      top: -10px;
+      left: -30px;
+    }
+  }
+
+  // .posibilities__label--2
+
+  &__label--2 {
+    bottom: -31px;
+    right: -109px;
+    @include breakpoint(1439.98px) {
+      bottom: -10px;
+      right: -60px;
+    }
+    @include breakpoint(430px) {
+      bottom: -10px;
+      right: -30px;
+    }
+  }
+
+  // .posibilities__circle
+
+  &__circle {
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+
+    transform: scale(0);
+    transition: all 0.3s ease;
+
+    &.active {
+      transform: scale(1);
+      transition: all 0.3s ease;
+    }
+  }
+
+  // .posibilities__circle--1
+
+  &__circle--1 {
+    bottom: 24px;
+    left: -60px;
+    width: 121px;
+    height: 121px;
+    background: #57a25b;
+    border: 1px solid #57a25b;
+  }
+
+  // .posibilities__circle--2
+
+  &__circle--2 {
+    top: -52px;
+    right: -44px;
+    width: 121px;
+    height: 121px;
+
+    border: 2px solid #f2bd42;
+  }
+}
+
+@include breakpoint($breakpoint-2) {
+  .posibilities {
+    padding: 62px 0 58px 0;
+    &__container {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 23px;
+      text-align: center;
+    }
+
+    // .posibilities__descr
+
+    &__descr {
+      text-align: center;
+      margin-bottom: 23px;
+      font-family: "Rubik";
+      font-size: 1.1rem;
+      line-height: 1.6;
+      /* or 162% */
+
+      color: #81878e;
+    }
+
+    &__uptitle {
+      text-align: center;
+    }
+
+    &__button {
+      max-width: 115px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-2) {
+  .posibilities {
+    &__image {
+      img {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+@include breakpoint(430px) {
+  .posibilities {
+    &__image {
+      img {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+@include breakpoint($breakpoint-5) {
+  .posibilities__button {
+    max-width: 73px;
+  }
+}

@@ -1,0 +1,135 @@
+.optimization {
+  padding: 220px 0 124px 0;
+  // .optimization__container
+
+  // .optimization__title
+
+  &__title {
+    margin-bottom: 118px;
+  }
+
+  // .optimization__columns
+
+  &__columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .optimization__divider
+
+  &__divider {
+    position: relative;
+    display: block;
+    border-top: 1px dashed black;
+    max-width: 100px;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50px);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 19px;
+      height: 19px;
+
+      border: 4px solid #191c1f;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: -9px;
+      left: -32px;
+    }
+
+    &::after {
+      top: -9px;
+      right: -32px;
+    }
+  }
+}
+
+.item-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // .item-column__image
+
+  &__image {
+    margin-bottom: 14px;
+  }
+
+  // .item-column__title
+
+  &__title {
+    margin-bottom: 23px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.16;
+
+    color: #191c1f;
+  }
+
+  // .item-column__descr
+
+  &__descr {
+    font-family: "Rubik";
+    font-size: 1.1rem;
+    line-height: 1.6;
+    /* or 162% */
+    text-align: center;
+
+    color: #81878e;
+  }
+}
+
+@include breakpoint($breakpoint-2) {
+  .optimization {
+    padding-top: 120px;
+    padding-bottom: 30px;
+    &__divider {
+      max-width: 40px;
+    }
+
+    &__uptitle {
+      text-align: center;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  .item-column {
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__descr {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-4) {
+  .optimization {
+    &__columns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__divider {
+      margin-top: 50px;
+    }
+  }
+
+  .item-column {
+    max-width: 195px;
+    margin-bottom: 50px;
+  }
+}

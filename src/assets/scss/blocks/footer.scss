@@ -1,0 +1,174 @@
+.footer {
+  padding: 44px 0 0 0;
+  background-color: #191c1f;
+
+  // .footer__bottom
+
+  &__bottom {
+    padding: 11px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid #97989a;
+  }
+
+  // .footer__logo
+
+  &__logo {
+    color: #fff;
+  }
+
+  &__rights {
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #97989a;
+  }
+}
+.top-footer {
+  margin-bottom: 47px;
+  // .top-footer__columns
+
+  &__columns {
+    display: flex;
+  }
+
+  // .top-footer__column
+
+  &__column {
+    &.cl {
+      flex: 1 1 38%;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  // .top-footer__lang
+
+  &__lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 61px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.active > .top-footer__img > .icon-flag {
+      display: block;
+    }
+    &.active > .top-footer__img > .icon-lang {
+      display: none;
+    }
+  }
+
+  // .top-footer__text
+
+  &__text {
+    font-size: 12px;
+    line-height: 24px;
+    margin-left: 8px;
+    color: #fff;
+  }
+}
+
+.icon-flag {
+  display: none;
+}
+.right-column {
+  flex: 1 1 62%;
+
+  // .right-column__columns
+
+  &__columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 136px;
+  }
+
+  // .right-column__name
+
+  &__name {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #ffffff;
+  }
+
+  // .right-column__item
+
+  &__item {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    transition: all 0.2s linear;
+    color: #97989a;
+    white-space: nowrap;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:hover {
+      color: #d4d6da;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-2) {
+  .right-column {
+    &__columns {
+      gap: 70px;
+    }
+
+    &__name {
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-3) {
+  .right-column {
+    &__columns {
+      gap: 50px;
+    }
+
+    &__name {
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-3) {
+  .right-column {
+    &__columns {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__column {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__list {
+      display: none;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-3) {
+  .top-footer__lang {
+    margin-right: 30px;
+  }
+}

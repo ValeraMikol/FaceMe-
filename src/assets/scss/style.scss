@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,300italic,regular,700);
+@import url(https://fonts.googleapis.com/css?family=Readex+Pro:regular);
+
+@import "./mixins";
+@import "./vars";
+@import "./vendor/null.scss";
+
+[class*="__container"] {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@include breakpoint(1439.98px) {
+  [class*="__container"] {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@include breakpoint($breakpoint-1) {
+  [class*="__container"] {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@include breakpoint($breakpoint-2) {
+  [class*="__container"] {
+    max-width: 747px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@import "./blocks/header.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/enjoy.scss";
+@import "./blocks/label.scss";
+@import "./blocks/optimization.scss";
+@import "./blocks/uptitle.scss";
+@import "./blocks/posibility.scss";
+@import "./blocks/mobile.scss";
+@import "./blocks/accordion.scss";
+@import "./blocks/support.scss";
+@import "./blocks/footer.scss";
